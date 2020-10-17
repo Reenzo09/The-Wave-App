@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: Arial;
+}
+
+body {
+	background: url('../img/dust_scratches.png');
+	overflow-x: hidden;
+}
+
+header {
+	width: 100vw;
+	background-color: rgb(251, 251, 251);
+	position: relative;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.navbar-toggler {
+	border: none;
+	padding-left: 0;
+	z-index: 1;
+}
+
+.navbar-toggler-icon {
+	background: url('../img/menu.png') no-repeat center center;
+}
+
+header li {
+	margin-left: 1rem;
+	margin-top: 1em;
+}
+
+#logo {
+	font-size: 0;
+	position: absolute;
+	height: 23px;
+	top: 17px;
+	background: url(../img/Logo.png) no-repeat center;
+}
+
+#carrito{
+    z-index: 2;
+    position: fixed;
+    top: 1.3%;
+    right: 8%;
+}
+
+#carrito span{
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: -10px;
+    border-radius: 10px;
+    text-align: center;
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    background-color: lemonchiffon;
+    color: black;
+}
+
+#uno {
+	margin-top: 2em;
+}
+
+.carousel h2 {
+    position: absolute;
+    left: -99rem;
+    overflow: hidden;
+}
+
+.carousel-indicators {
+	bottom: -16px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	display: none;
+}
+
+.categoria h3{
+	font-size: 0;
+}
+
+.categoria img:hover {
+	opacity: .5;
+	transition: all .5s;
+	cursor: pointer;
+}
+
+.fondo-carousel-extra {
+	background-color: #ebebebc9;
+}
+
+.table {
+	margin-top: 1rem;
+}
+
+.card_table {
+	width: 60vw;
+}
+
+.prodDestacado figcaption {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#prodDestacados h3 {
+    font-weight: bold;
+    font-size: 2em;
+	color: rgb(36, 136, 250);
+	text-transform: uppercase;
+}
+
+#prodDestacados button {
+    padding: .1em;
+}
+
+.nombreProd {
+    font-size: 1.5em;
+    color: black;
+}
+
+.precioProd, .precioMochi, #prodDestacados p, #dos p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#uno button, #dos button {
+    width: 90%;
+	height: 3rem;
+	font-weight: 700;
+}
+
+.figure-img {
+	cursor: pointer;
+}
+
+/*
+* ----------- PAGINA DOS -----------
+*/
+
+#dos form {
+	background-color: gainsboro;
+	height: 3rem;
+}
+
+#dos form label {
+	padding-top: .8em;
+}
+
+#prodMochilas h4 {
+	font-size: 2.5em;
+	color: rgb(36, 136, 250);
+}
+
+/*
+* MODAL CARRITO 
+*/
+
+.modal {
+	/*position: fixed;*/
+	z-index: 10001!important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/*top: 10px;
+	left: 0;
+	bottom: 0;
+	right: 0;*/
+	background-color: rgba(0,0,0,.9);
+}
+
+.modal > a {
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 1em;
+	right: 1em;
+	border-radius: 1em;
+	width: 2em;
+	height: 2em;
+	background-color: rgba(255,255,255,.9);
+	font-size: 1em;
+	font-weight: 400;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+
+.modal > a:hover {
+	background-color: black;
+	color: rgba(255,255,255,.9);
+}
+
+.modal > div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: 80%;
+	padding: 2em;
+	background-color: #FFF;
+	overflow-y: scroll;
+}
+
+.modal p {
+	font-size: 1.2em;
+	font-weight: 400;
+	text-align: left;
+	color: black;	
+}
+
+.modal span {
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.carrito > p {
+	text-align: center;
+	font-size: 1em;
+	font-weight: 700;
+	margin: 0;
+	color: rgb(36, 136, 250);
+	padding: 1em;
+	-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+}
+
+.modal button {
+	margin-top: 1em;
+	border-radius: .5em;
+	border: 1px solid white;
+	width: 100%;
+	padding: 0 .5em;
+	background: rgb(36, 136, 250);
+	font-size: 1.8em;
+	line-height: 1.5;
+	font-weight: 400;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+.modal button:last-of-type:hover {
+	border: 1px solid rgb(36, 136, 250);
+	background: white;
+	color: rgb(36, 136, 250);	
+}
+
+.modal ul {
+	list-style: none;
+	width: 100%;
+}
+
+.modal li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	font-size: 1em;
+	text-align: left;
+	color: black;
+	background-color: rgb(240, 240, 240);
+	border-bottom: 1px solid black;
+	/*margin-bottom: .5em;*/
+	padding: .5em;
+}
+
+.modal li a {
+	font-size: 0;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	overflow: hidden;
+	background: url('../img/equis.png') no-repeat center;
+}
+
+#modalCarrito li .precioCarro, #modalCarrito li span {
+	margin-bottom: 0;
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+#modalProducto > div {
+    align-items: center;
+}
+
+h5 {
+	font-size: 1.5em;
+	color: rgb(59, 59, 59);
+    font-weight: 700;
+	text-align: left;
+	padding-top: .5em;
+}
+
+.modal button:last-of-type {
+    font-size: 1.5em;
+	padding: .3em;
+	font-weight: 700;
+}
+
+.carrito > div > p {
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: .5rem;
+	margin-top: 1.5rem;
+	cursor: pointer;
+}
+
+#modalCarrito button {
+    margin-top: .5em;
+}
+
+.subtotal, .subtotal ~ div, .subtotal ~ div ~ div {
+	padding: 1em;
+	border: 1px solid black;
+}
+
+.subtotal ~ div ~ div {
+	color: red;
+	font-size: 1.1rem;
+}
+
+#modalProducto > div > div > p:first-of-type {
+	font-size: 2em;
+	color: rgb(59, 59, 59);
+}
+
+#modalProducto > div > div > p:last-of-type {
+	font-size: 1.2em;
+	color: rgb(59, 59, 59);
+}
+
+#modalProducto button {
+	font-size: 1.3em;
+}
+
+#compra button {
+    margin-top: .5em;
+    font-size: 1.5em;
+	font-weight: 700;
+	margin-left: 1em;
+	margin-right: 1em;
+	border-radius: .5em;
+	text-align: center;
+	cursor: pointer;
+	background-color: rgb(36, 136, 250);
+	color: white;
+}
+
+#compra button:hover {
+	border: 1px solid rgb(36, 136, 250);
+	background: white;
+	color: rgb(36, 136, 250);
+}
+
+#compra {
+    position: fixed;
+	z-index: 10001;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.9);
+}
+
+#modalForm {
+    background-color: white;
+	padding: 2em;
+	width: 100%;
+	max-height: 80%;
+	overflow-y: scroll;
+}
+
+#compra > a {
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 1em;
+	right: 1em;
+	border-radius: 1em;
+	width: 2em;
+	height: 2em;
+	background-color: rgb(146, 146, 146);
+	font-size: 1em;
+	font-weight: 400;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+
+#compra .subrayado {
+	font-size: 1.2em;
+	font-weight: 400;
+	color: black;
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: .5rem;
+	margin-top: .5rem;
+	cursor: pointer;
+}
+
+#modalMantenimiento > div {
+	overflow-y: hidden;
+}
+
+#modalBanner img {
+	cursor: pointer;
+}
+
+.ulInfor {
+	margin-bottom: 0;
+}
+
+/*
+	TABLET
+*/
+@media screen and (min-width: 768px) {
+	.card_table {
+		width: 40vw;
+	}
+
+	#prodMochilas .card:nth-child(2) {
+		margin-top: 0!important;
+	} 
+
+	#prodMochilas .card:nth-child(3), #prodMochilas .card:nth-child(4) {
+		margin-bottom: 3rem!important;
+	}
+
+	.modal {
+		align-items: center;
+	}
+
+	#modalProducto img {
+		width: 70%;
+	}
+
+	.modal > div {
+		width: 75%;
+		align-items: center;
+	}
+
+	.carrito > div {
+		width: 100%;
+	}
+
+	#modalForm {
+		width: 75%;
+	}
+}
+
+/*
+	PC
+*/
+@media screen and (min-width: 992px) {
+	header li:hover {
+		background-color: rgb(36, 136, 250);
+		border-radius: 15%;
+	}
+	
+	header li {
+		margin-top: 0;
+	}
+
+	header li a:hover {
+		color: white;
+	}
+	
+	#logo {
+		top: 18px;
+		right: 40%;
+	}
+
+	nav {
+		z-index: 3;
+	}
+
+	.carousel-control-next-icon, .carousel-control-prev-icon {
+		display: block;
+	}
+
+	#prodDestacados table{
+		display: table;
+	}
+
+	.table td {
+		padding: 0 .5rem!important;
+	}
+
+	.table td:nth-child(1) {
+		padding-left: 1rem!important;
+	}
+
+	.card_table {
+		width: 18vw;
+	}
+
+	#dos .card_table:nth-child(1) {
+		margin-left: .1rem;
+	}
+
+	#carrito {
+		z-index: 3;
+		cursor: pointer;
+	}
+
+	.modal > div {
+		width: 50%;
+		overflow-y: auto;
+	}
+
+	.carrito > div > p {
+		float: left;
+	}
+	
+	.carrito > div > button {
+		float: right;
+		font-size: 1em!important;
+		width: 30%;
+		margin-top: 1.3rem!important;
+	}
+
+	#modalProducto > div {
+		height: 94%;	
+	}
+
+	#compra .botones p {
+		float: left;
+		text-align: left;
+	}
+
+	#compra .botones .comprar {
+		float: right;
+		font-size: 1em;
+		margin-top: 0;
+	}
+
+	#compra .botones {
+		margin-top: 1.5em;
+	}
+}
